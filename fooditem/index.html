@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- bootstrap link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- font awesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- my style link -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- my responsive style link -->
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body>
+    <!-- header section -->
+    <header>
+      <nav class="navbar navbar-expand-lg navigation-wrap">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="/images/logo.png " alt="" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-stream navbar-toggler-icon"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="http://127.0.0.1:5501/Food_Application/index.html"
+                  >Home</a
+                >
+              </li>
+
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="/index.html#about">About us</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="/index.html#explore-food"
+                  >Explore foods</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/index.html#testimonial">Reviews</a>
+              </li>-->
+
+              <li class="nav-item">
+                <div class="dropdown show">
+                  <a
+                    class="main-btn dropdown-toggle"
+                    href="#"
+                    role="button"
+                    id="dropdownMenuLink"
+                    data-toggle="dropdown"
+                    onclick="showprofile()"
+                  >
+                    My profile
+                  </a>
+
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" id="useremail" href="#"></a>
+
+                    <a class="dropdown-item" href="#" onclick="Onlogout()"
+                      >Logout</a
+                    >
+                  </div>
+                </div>
+              </li>
+              <!-- <li>
+                <button class="main-btn" id="loginbtn" onclick="loginshow()">
+                  Login
+                </button>
+              </li> -->
+
+              <li>
+                <div class="d-flex" role="search">
+                  <input
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <button class="main-btn btn-outline ms-1" type="submit">
+                    Search
+                  </button>
+                </div>
+                <div
+                  class="position-absolute invisible autocomplete"
+                  id="form_complete"
+                >
+                  <!-- <p class="ps-2 pt-2">unnati</p>
+                  <p class="ps-2 pt-2">unnati</p> -->
+                </div>
+              </li>
+              <li>
+                <i
+                  class="fa-solid fa-cart-shopping ms-5 fs-3 position-relative"
+                  style="color: #a73939"
+                  onclick="showCart()"
+                >
+                  <span
+                    class="position-absolute top-3 start-110 translate-middle btn-sm border border-light-danger rounded-circle bg-white p-2 w-25 fs-5 invisible cartitemno"
+                  >
+                    1
+                  </span></i
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="bg-white fooditemadded">
+        <div class="fooditemadded1">
+          <!-- <div class="d-flex justify-content-between addedfood">
+          <h3>burger creaser</h3>
+          <h3>$ 10</h3>
+          <div class="btnofplusminus">
+            <button class="sbtn ms-1" id="plusbtn${i}">+</button>
+            <button class="sbtn ms-1" id="minusbtn${i}">-</button>
+            <button class="sbtn-dlt ms-1 mt-1" id="dltbtn${i}">dlt</button>
+            
+          </div>
+          <img src="/images/img/img-3.jpg" alt="" class="cart-img" />
+        </div> -->
+        </div>
+        <hr />
+        <div class="d-flex justify-content-between subtotal">
+          <h3>Subtotal</h3>
+          <h3 id="subtotalamount">$ 0</h3>
+        </div>
+        <div class="d-flex justify-content-between flex-column subtotal">
+          <button class="main-btn w-100 mt-1" onclick="showOrderpage()">
+            Place Order
+          </button>
+          <button class="main-btn w-100 mt-1" onclick="closeCart()">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </header>
+    <section id="explore-food">
+      <div class="explore-food wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="text-center text-content">
+                <h2>Explore our Foods</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+                  tempora alias esse maxime incidunt eum, inventore sunt
+                  deserunt adipisci recusandae.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row pt-5 cardappend">
+            <!-- <div class="col-lg-4 col-md-6 mb-lg-0 mb-5 cardshow">
+              <div class="card">
+                <img src="/images/img/img-3.jpg" class="img-fluid" />
+                <div class="pt3">
+                  <h4>Rainbow vegetable sandwich</h4>
+                  <p>Time: 15-20 Minutes |Serves:1</p>
+                  <span>$10.50 <del>$11.70</del></span>
+                  <button class="main-btn">Order-now</button>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="./index.js"></script>
+</html>

@@ -83,6 +83,16 @@ h2 {
     line-height: 3rem;
 }
 
+h3 {
+
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: var(--secondary-color);
+    text-transform: capitalize;
+    font-family: var(--secondary-font);
+    line-height: 3rem;
+}
+
 h4 {
     font-size: 18px;
     font-weight: 800;
@@ -111,6 +121,7 @@ p {
 }
 
 .main-btn {
+    cursor: pointer;
     display: inline-block;
     padding: 0.625rem 1.875rem;
     line-height: 1.5625rem;
@@ -358,4 +369,196 @@ p {
 
 .testimonial-section .carousel-indicators {
     bottom: -2.8125rem;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form {
+    border: 3px solid #f1f1f1;
+}
+
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.modal button {
+    padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+.model {
+    display: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+}
+
+.signin {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer-actions {
+    width: 50%;
+}
+
+.dropdown {
+    display: none;
+}
+
+input.error {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+label.error,
+p.error {
+    color: var(--primary-color);
+}
+
+.autocomplete {
+    border: 2px solid var(--primary-color);
+    width: 190px;
+    border-radius: 4px;
+}
+
+.autocomplete p {
+    color: var(--primary-color);
+}
+
+.autocomplete p:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+/* sidebar css */
+
+.fooditemadded {
+    width: 29%;
+    z-index: 1111;
+    position: fixed;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 2px;
+    max-height: 420px;
+    overflow: scroll;
+    display: none;
+    margin-top: 10px;
+
+}
+
+.sbtn {
+    width: 20px;
+    color: var(--primary-color);
+
+}
+
+.sbtn-dlt {
+    width: 30px;
+    color: var(--primary-color);
+}
+
+header {
+    position: relative;
+}
+
+.cart-img {
+    width: 60px;
+    height: 100%;
+    margin: 4px;
+}
+
+/* .addedfood h3 {
+    max-width: 1px;
+} */
+.payment-method {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.payment-method input {
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin: 2px
+}
+
+.payment-method h4 {
+    margin: 2px
+}
+
+.disableclass {
+    background-color: red;
+}
+
+.showorderdata img {
+    width: 60px;
+    height: 50px;
 }
